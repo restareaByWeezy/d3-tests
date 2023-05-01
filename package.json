@@ -1,0 +1,81 @@
+{
+  "name": "react-vite-template",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "cz": "./.yarn/unplugged/cz-customizable-npm-7.0.0-1704ad9243/node_modules/cz-customizable/standalone.js",
+    "dev": "vite --host 0.0.0.0",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx,.mdx .",
+    "lint --fix": "eslint --ext .js,.jsx,.ts,.tsx,.mdx . --fix"
+  },
+  "config": {
+    "cz-customizable": {
+      "config": "cz-config.js"
+    }
+  },
+  "resolutions": {
+    "esbuild": "^0.14.43"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.5.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@tanstack/react-query": "^4.29.3",
+    "@tanstack/react-query-devtools": "^4.29.3",
+    "@types/d3": "^7.4.0",
+    "@vanilla-extract/dynamic": "^2.0.3",
+    "@vanilla-extract/recipes": "^0.3.0",
+    "@vanilla-extract/sprinkles": "^1.5.1",
+    "axios": "^1.2.2",
+    "d3": "^7.8.4",
+    "dayjs": "^1.11.7",
+    "framer-motion": "^10.12.2",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "vite-plugin-svgr": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@types/lodash": "^4.14.191",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-lottie": "^1.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "@vanilla-extract/css": "^1.7.1",
+    "@vanilla-extract/vite-plugin": "^3.2.1",
+    "@vitejs/plugin-react": "^1.3.2",
+    "babel-loader": "^8.3.0",
+    "classnames": "^2.3.2",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.7.0",
+    "react-lottie-player": "^1.5.4",
+    "semver": "^7.3.8",
+    "typescript": "*",
+    "vite": "^2.9.12",
+    "vite-plugin-checker": "^0.4.6"
+  },
+  "dependenciesMeta": {
+    "cz-customizable@7.0.0": {
+      "unplugged": true
+    }
+  },
+  "packageManager": "yarn@3.3.1"
+}
