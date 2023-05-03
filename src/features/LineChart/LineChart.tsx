@@ -1,24 +1,28 @@
 import * as d3 from 'd3';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+import { data } from './data';
 
 const transform = 'translate(50,50)';
 
-const LineChart = ({
-  data,
-  width,
-  height,
-  marker,
-}: {
-  data: number[][];
-  width: number;
-  height: number;
-  marker: number;
-}) => {
+const LineChart = () => {
+  const [marker, setMarker] = useState(10);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setMarker((prevMarker) => (prevMarker + 10 > 100 ? 10 : prevMarker + 10));
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
   const svgRef = useRef(null);
 
   const renderSvg = () => {
-    const chartWidth = width - 200;
-    const chartHeight = height - 200;
+    const chartWidth = 500 - 200;
+    const chartHeight = 300 - 200;
 
     const svg = d3.select(svgRef.current);
 
@@ -88,13 +92,9 @@ const LineChart = ({
 
   useEffect(() => {
     renderSvg();
-  }, [width, height, data, marker]);
+  }, [marker]);
 
-  if (!width || !height || !data) {
-    return <></>;
-  }
-
-  return <svg ref={svgRef} width={width} height={height} />;
+  return <svg ref={svgRef} width={500} height={300} />;
 };
 
 export default LineChart;
