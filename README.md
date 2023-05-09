@@ -1,5 +1,3 @@
-## Using
+# typing d3
 
-- React 18
-- Vanilla Extract
-- Vite
+d3 deep dive 
